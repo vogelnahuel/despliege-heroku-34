@@ -40,7 +40,7 @@ const args = parseArgs(process.argv.splice(2));
 const port = args.port;
 
 //sockets
-httpServer.listen(port || 8080, () => {
+httpServer.listen(process.env.PORT || 8080, () => {
   console.log("SERVER ON");
 });
 
